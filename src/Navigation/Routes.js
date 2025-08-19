@@ -1,31 +1,3 @@
 export default Routes = {
-    AddMeeting: "AddMeeting",
-    AddActivity: "AddActivity",
-    ViewActivity: "ViewActivity",
-    AddDeal: "AddDeal",
-    ViewDeal: "ViewDeal",
-    LeadDetails: "LeadDetails",
-    ContactDetail: "ContactDetail",
-    CustomerDetail: "CustomerDetail",
-    ChangePassword: "ChangePassword",
-    // ====================================
-    Welcome: 'Welcome',
-    MpinLogin: 'MpinLogin',
-    Login: 'Login',
-    VerifyOtp: 'VerifyOtp',
-    CreateMpin: 'CreateMpin',
-    AuthCreateMpin: 'AuthCreateMpin',
-    Notifications: 'Notifications',
-    Messsages: 'Messsages',
-    Alerts: 'Alerts',
-    AdmissionDetails: 'AdmissionDetails',
-    ExamDetails: 'ExamDetails',
-    CounterBased: 'CounterBased',
-    Home: 'Home',
-    Profile: 'Profile',
-    Feedback: 'Feedback',
-    Contact: 'Contact',
-    ThemeSelection: 'ThemeSelection',
-    StudyMaterial: 'StudyMaterial',
-
+    
 }

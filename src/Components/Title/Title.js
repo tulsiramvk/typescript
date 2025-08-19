@@ -1,10 +1,10 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import React, { useState } from 'react'
-import FetherIcon from '@react-native-vector-icons/Feather'
+import FetherIcon from 'react-native-vector-icons/Feather'
 import fonts from '../../helpers/fonts'
 import { useNavigation } from '@react-navigation/native'
 import Modal from 'react-native-modal'
-import colors from './../../helpers/colors';
+import {colors} from './../../helpers/colors';
 
 const Title = ({ name, totalBets }) => {
     const navigation = useNavigation()
@@ -21,7 +21,7 @@ const Title = ({ name, totalBets }) => {
         }
     }
     return (<>
-        <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 20, marginBottom: 0 }}>
+        <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 15, marginBottom: 0 }}>
             <TouchableOpacity onPress={handleBack}><FetherIcon name={"chevron-left"} size={22} color={colors.white} /></TouchableOpacity>
             <View><Text allowFontScaling={false} style={[{ marginStart: 5, color: colors.white, fontFamily: fonts.medium, fontSize: 16 }]}>{name}</Text></View>
         </View>

@@ -2,18 +2,16 @@ import { View, Text, StatusBar } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-// import Welcome from '../Screens/Login/Welcome';
-// import Login from '../Screens/Login/Login';
-// import ForgotPassword from '../Screens/ForgotPassword/ForgotPassword';
-// import ChangePassword from '../Screens/ForgotPassword/ChangePassword';
-// import VerifyEmail from '../Screens/ForgotPassword/VerifyEmail';
+import Welcome from '../screens/Auth/Login/Welcome';
+import Login from '../screens/Auth/Login/Login';
+import ForgotPassword from '../screens/Auth/ForgotPassword/ForgotPassword';
+import ChangePassword from '../screens/Auth/ForgotPassword/ChangePassword';
+import VerifyEmail from '../screens/Auth/ForgotPassword/VerifyEmail';
 
 
 const Stack = createNativeStackNavigator();
 
-const Welcome = ()=>{
-    return <View><Text>Welcome</Text></View>
-}
+
 const AuthNavigations = () => {
     return (
         <NavigationContainer
@@ -28,10 +26,10 @@ const AuthNavigations = () => {
                     statusBarAnimation: 'slide'
                 }}>
                 <Stack.Screen name="Welcome" component={Welcome} />
-                {/* <Stack.Screen name="Login" component={Login} />
+                <Stack.Screen name="Login" component={Login} />
                 <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
                 <Stack.Screen name="ChangePassword" component={ChangePassword} />
-                <Stack.Screen name="VerifyEmail" component={VerifyEmail} /> */}
+                <Stack.Screen name="VerifyEmail" component={VerifyEmail} />
             </Stack.Navigator>
         </NavigationContainer>
     )

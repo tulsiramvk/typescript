@@ -2,9 +2,7 @@ import axios from 'axios';
 import NetInfo from '@react-native-community/netinfo';
 import { BASE_URL } from './constants';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { authStore } from '../Store/AuthStore/auth';
-import { Logout } from '../Store/Storage';
-import { showToast } from '../Components/Modal/showToasts';
+import { useAuthenticationStore } from '../Store/AuthenticationStore';
 
 const axiosInstance = axios.create({
   baseURL: BASE_URL, // Replace with your API base URL
@@ -56,7 +54,7 @@ const request = async (method, path, params = {}, customHeaders = {}, options = 
     let headers = { ...customHeaders };
     if (requireAuth) {
       const token = await getToken();
-      headers.Authorization = 'Bearer ' + token?.access;
+      headers.Authorization = 'Bearer ' + token?.access_token;
     }
     const response = await axiosInstance.request({
       method,
@@ -69,9 +67,10 @@ const request = async (method, path, params = {}, customHeaders = {}, options = 
   } catch (error) {
     console.log({ error });
     if(error?.response?.status === 401) {
-      Logout()
-      authStore.getState().setUserInfo(null);
-      showToast("Session expired, please login again.");
+      // Logout()
+      await AsyncStorage.removeItem("userInfo")
+      useAuthenticationStore.getState().setUserInfo(null);
+      
     }
     throw parseError(error);
   } finally {

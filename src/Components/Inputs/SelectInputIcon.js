@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { View, TextInput, StyleSheet, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import Fonts from '../../Utils/Fonts';
-import { colors } from '../../Utils/Colors';
-import LinearGradient from 'react-native-linear-gradient';
+import fonts from '../../helpers/fonts';
 import SelectDropdown from 'react-native-select-dropdown'
+import {colors} from './../../helpers/colors';
+
+const Fonts = fonts;
 
 const styles = StyleSheet.create({
     container: {
@@ -16,14 +17,14 @@ const styles = StyleSheet.create({
         // borderRadius: 10,
         paddingHorizontal: 15,
         marginVertical: 3,
-        paddingVertical: 0
+        paddingVertical: 7
     },
     input: {
         flex: 1,
         marginLeft: 10,
         fontSize: 13,
         fontFamily: Fonts.regular, letterSpacing: 0.4,
-        color: colors.white, paddingVertical: 10
+        color: colors.white, paddingVertical: 5
     },
     dropdownItemStyle: {
         width: '100%',
@@ -88,7 +89,7 @@ const SelectInputIcon = ({ iconName, placeholder, options, value, onChangeText }
                 dropdownStyle={{ width: '90%', marginLeft: '-14%', marginTop: '-5%', borderRadius: 4, overflow: 'hidden', backgroundColor: colors.darkBg }}
             />
 
-            <View style={{ position: 'absolute', right: 0, marginTop: 40, marginRight: 15 }}>
+            <View style={{ position: 'absolute', right: 0, marginTop: 0, marginRight: 15 }}>
                 <Icon name={'chevron-down'} size={22} color={colors.white} />
             </View>
 

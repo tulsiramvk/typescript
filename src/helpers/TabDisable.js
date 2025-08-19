@@ -2,8 +2,8 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import PTRView from 'react-native-pull-to-refresh';
 import { StyleSheet } from "react-native";
-import { colors } from './Colors';
-import Fonts from './Fonts';
+import fonts from './fonts';
+import {colors} from './colors';
 
 const TabDisable = ({ onRefresh }) => {
     const styles = StyleSheet.create({
@@ -11,7 +11,7 @@ const TabDisable = ({ onRefresh }) => {
             width: '95%', marginHorizontal: 'auto'
         },
         cardLabel: {
-            fontSize: 11, color: colors.thirdText, fontFamily: Fonts.regular
+            fontSize: 11, color: colors.thirdText, fontFamily: fonts.regular
         },
     })
     return (

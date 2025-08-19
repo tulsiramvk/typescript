@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { View, TextInput, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import Fonts from '../../Utils/Fonts';
-import { colors } from '../../Utils/Colors';
+import fonts from '../../helpers/fonts';
 import LinearGradient from 'react-native-linear-gradient';
+import {colors} from './../../helpers/colors';
+
+const Fonts = fonts
 
 const styles = StyleSheet.create({
   container: {
@@ -15,7 +17,7 @@ const styles = StyleSheet.create({
     // borderRadius: 10,
     paddingHorizontal: 15,
     marginVertical: 3,
-    paddingVertical: 0
+    paddingVertical: 5.5
   },
   input: {
     flex: 0.95,

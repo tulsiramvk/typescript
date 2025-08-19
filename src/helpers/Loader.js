@@ -1,7 +1,7 @@
 import React from 'react'
 import Spinner from 'react-native-loading-spinner-overlay';
-import Fonts from './Fonts';
-import { colors } from './Colors';
+import fonts from './fonts';
+import { colors } from './colors';
 
 const Loader = (props) => {
     const { spinning } = props
@@ -9,7 +9,7 @@ const Loader = (props) => {
         <Spinner
             visible={spinning}
             textContent={'Please wait ! Loading...'}
-            textStyle={{ marginTop: -35, fontFamily: Fonts.regular, fontSize: 14, fontWeight: 400, color: colors.white }}
+            textStyle={{ marginTop: -35, fontFamily: fonts.regular, fontSize: 14, fontWeight: 400, color: colors.white }}
             size={'large'}
             overlayColor={'rgba(0,0,0,0.7)'}
             color={colors.blue}

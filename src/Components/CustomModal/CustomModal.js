@@ -2,8 +2,8 @@ import React, { forwardRef } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import RBSheet from 'react-native-raw-bottom-sheet';
 import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
-import globarStyles from '../../Utils/globarStyles';
-import { colors } from '../../Utils/Colors';
+import globalStyles from '../../helpers/globalStyles';
+import { colors } from '../../helpers/colors';
 
 const CustomModal = forwardRef((props, ref) => {
     const { height, headerTitle, modalContent } = props;
@@ -40,7 +40,7 @@ const CustomModal = forwardRef((props, ref) => {
             >
                 <View>
                     <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingBottom: 15, paddingTop: 5, alignItems: 'center' }}>
-                        <Text allowFontScaling={false} style={[globarStyles.modalHeaderTitle]}>{headerTitle} :</Text>
+                        <Text allowFontScaling={false} style={[globalStyles.modalHeaderTitle]}>{headerTitle} :</Text>
                         <TouchableOpacity onPress={() => ref.current.close()}>
                             <MaterialCommunityIcon name={'close-thick'} size={20} color={colors.white} />
                         </TouchableOpacity>
